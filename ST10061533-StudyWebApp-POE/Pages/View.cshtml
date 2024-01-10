@@ -1,0 +1,263 @@
+﻿@page
+@model ST10061533_StudyWebApp_POE.Pages.ViewModel
+@{
+    ViewData["Title"] = "View Modules";
+}
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Study Time</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ChaukeStudyTimeWebApp.styles.css" asp-append-version="true" />
+
+    <style>
+        .container {
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+
+        .table {
+            width: auto;
+            height: auto;
+            margin-top: 4rem;
+            border-collapse: collapse;
+            font-size: 0.8em;
+            font-family: sans-serif;
+            box-shadow: 0 0 2rem rgba(0, 0, 0, 0.45);
+        }
+
+            .table thead tr {
+                background-color: #009879;
+                color: #ffffff;
+            }
+
+            .table thead tr {
+                background-color: #009879;
+                color: #ffffff;
+            }
+
+        tr:hover {
+            background-color: #D6EEEE;
+        }
+
+        .Name {
+            margin-top: 2rem;
+            margin-left: 21rem;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <br />
+    <center><h1 style="border:solid; border-color:midnightblue; border-radius: 10px; width:25rem"> View Modules </h1></center>
+    <center>@Model.message</center>
+
+    
+        <div class="container">
+
+            <center>
+            <table class="table">
+                <thead>
+                    <tr>
+
+                        <th>
+                            Module Code
+                        </th>
+
+                        <th>
+                            Module Name
+                        </th>
+
+                        <th>
+                            Module Credit
+                        </th>
+                        <th>
+                            Class Hours
+                        </th>
+                        <th>
+                            Week Hours
+                        </th>
+                        <th>
+                            Start Date
+                        </th>
+                        <th>
+                            End Date
+                        </th>
+                        <th>
+                            Self Study Per Week
+                        </th>
+
+
+
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var item in Model.moduleslist)
+                    {
+                        <tr>
+
+                            <th>@item.ModuleCode.ToUpper() </th>
+                            <th>@item.ModuleName.ToUpper()</th>
+                            <th>@item.NumberOfCreadits</th>
+                            <th>@item.ClassHoursPerWeek</th>
+                            <th>@item.NumberOfWeeks</th>
+                            <th>@item.StartDate</th>
+                            <th>@item.EndDate</th>
+                            <th>@item.SelfStudyhoursPerWeek.ToUpper()</th>
+
+                        </tr>
+
+
+
+                    }
+
+
+                </tbody>
+
+            </table>
+        </center>
+
+            <form id="form" method="post">
+
+                <label>
+                    Select Module Code
+
+                </label>
+                <br />
+
+                <select name="id" style="width:200px">
+                    @foreach (var item in Model.moduleslist)
+                    {
+                        <option>@item.ModuleCode.ToUpper() </option>
+
+
+
+                    }
+                </select>
+
+            <br />
+            <center>
+
+                <p style="font-size:1rem; color: red">
+
+                    @Model.message
+
+
+                </p>
+
+            </center>
+            <br />
+            
+            <center>
+                <div id="Details" class="Name" style="display:flex">
+
+                    <br />
+
+
+                    <input class="input" type="text" inputmode="numeric" id="HOURS_USED" name="HOURS_USED" required>
+                    <label class="label" id="details"> Hours Spend</label>
+
+
+                </div>
+            </center>
+
+                <br />
+
+                <input class="input" id="btn" type="submit" name="submit" value="Calculate">
+
+            </form>
+
+
+
+        </div>
+   
+
+    <br />
+    <br />
+
+    <center>
+        <h1 style="border: solid; border-color:midnightblue; width:30rem; border-radius:10px">My Activity Breakdown: Pie Chart</h1><br />
+        <div style="width:800px;height:400px; border: solid; border-color:red; border-radius:10px">
+            <canvas id="myChartPie"></canvas>
+
+        </div>
+        <br />
+        <br />
+
+    </center>
+
+    <br />
+    <br />
+
+    <center><h1 style="border: solid; border-color:midnightblue; width:30rem; border-radius:10px">My Activity Breakdown: Bar Graph</h1></center>
+
+    <br />
+    <center>
+        <div style="width:900px;height:400px; border: solid; border-color:red; border-radius:10px">
+            <canvas id="myChartBar"></canvas>
+
+        </div>
+    </center>
+    <br />
+    <br />
+
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+
+    var ctx = document.getElementById('myChartPie');
+
+    var labels = [];
+    var data = [];
+    var codes = [];
+    @foreach (var item in Model.moduleslist)
+    {
+        @:labels.push('@item.ModuleName'.toUpperCase());
+        @:data.push('@item.SelfStudyhoursPerWeek');
+        @:codes.push('@item.ModuleCode'.toUpperCase());
+    }
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: labels,
+
+                datasets: [{
+                    label: 'Hours Left ',
+                    data: data,
+                    borderWidth: 1
+                }]
+            },
+
+        });
+
+    var chart = document.getElementById('myChartBar');
+
+
+    new Chart(chart, {
+        type: 'bar',
+        data: {
+            labels: codes,
+
+            datasets: [{
+
+                label: 'Hours Left ',
+                data: data,
+                borderWidth: 1
+            }]
+        },
+
+    });
+
+
+</script>

@@ -1,0 +1,12 @@
+This file is indicate changes to the previous class library
+
+The previous library was a .NetFrameWork which had 4 classes.cs
+Which were Validate, InsertInto, Users, and Modules 
+
+The classes contained c# code including Message Show Boxes passing grids as parameters
+and did not have connect string to the database
+
+The new class library target .net 6.0 standard library which has 4 classes.cs
+Which are Validate, InsertInto, Users, and Modules
+This class library has connection string to the database and does not contain any c# code like Message Show Boxes
+This class library has methods to insert into database, login in and reset password

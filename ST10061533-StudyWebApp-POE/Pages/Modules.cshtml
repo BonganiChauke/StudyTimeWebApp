@@ -1,0 +1,191 @@
+﻿@page
+@model ST10061533_StudyWebApp_POE.Pages.ModulesModel
+@{
+    ViewData["Title"] = "Modules";
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Study Time</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ChaukeStudyTimeWebApp.styles.css" asp-append-version="true" />
+</head>
+<style>
+
+    body {
+        height: 50vh
+    }
+
+</style>
+
+<body style="">
+
+    <div class="Container">
+
+        <header>
+
+            <center><img class="logo" src="Images/Color logo - no background.png" /></center>
+
+        </header>
+
+        <style>
+
+            .Name {
+                margin-left: 3rem;
+            }
+
+            .Num, .NUMBER_OF_WEEKS {
+                margin-top: 2rem;
+            }
+
+            .EndDate {
+                margin-left: 6.5rem;
+            }
+
+            #btn {
+                display: flex;
+                flex-direction: row;
+                margin-top: 2rem;
+                margin-left: 13rem;
+            }
+
+        </style>
+
+        <div class="Content">
+
+            <center><h1 style="font-family: 'Global Monospace'; font-weight: bold">Create A study plan</h1></center>
+            <center><small>Enter module details</small></center>
+
+            <div class="form">
+                
+                <form id="form" method="post">
+
+                    <br />
+                    <center>
+
+                        <p style="font-size:1rem; color: red">
+
+                            @Model.message
+
+
+                        </p>
+
+                    </center>
+                    <br />
+
+                    <div style="display: flex;">
+
+
+                        <div id="Details">
+
+                            <input class="input" type="text" id="text" name="MODULE_CODE" required>
+
+
+                            <label class="label" id="details">Module Code</label> <br />
+
+
+
+                        </div>
+
+                        <div id="Details" class="Name">
+
+
+                            <input class="input" type="text" id="ModuleName" name="MODULE_NAME" required>
+
+                            <label class="label" id="details">Module Name</label> <br />
+
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="Num" style="display: flex;">
+
+
+                        <div id="Details">
+
+                            <input class="input" type="text" id="ModuleName" name="NUMBER_OF_CREDITS" required inputmode="numeric">
+
+
+                            <label class="label" id="details">Number Of Credits</label> <br />
+
+
+
+                        </div>
+
+                        <div id="Details" class="Name">
+
+                            <input class="input" type="text" id="CLASS_HOURS_PER_WEEK" name="CLASS_HOURS_PER_WEEK" required inputmode="numeric">
+
+                            <label class="label" id="details">Class Hours Per Week</label> <br />
+
+
+
+                        </div>
+
+
+                    </div>
+
+                    <div id="Details" class="NUMBER_OF_WEEKS">
+
+                        <input class="input" type="text" id="NUMBER_OF_WEEKS" name="NUMBER_OF_WEEKS" required inputmode="numeric">
+
+                        <label class="label" id="details">Number of weeks</label> <br />
+
+
+
+                    </div>
+
+                    <div class="Num" style="display: flex;">
+
+
+                        <div id="Details">
+
+
+                            <label id="details">Start Date</label> <br />
+
+                            <input class="input" type="date" id="START_DATE" name="START_DATE" required>
+
+
+
+                        </div>
+
+                        <div id="Details" class="EndDate">
+
+                            <label id="details">End Date</label> <br />
+
+
+                            <input class="input" type="date" id="END_DATE" name="END_DATE" required>
+
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+
+                    <input class="input" id="btn" type="submit" name="submit" value="Save Module"> <br />
+                    <br /><br />
+
+                </form>
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+    
+
+</body>

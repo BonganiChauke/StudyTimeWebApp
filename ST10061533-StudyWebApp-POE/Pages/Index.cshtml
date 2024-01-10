@@ -1,0 +1,78 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+@{
+    ViewData["Title"] = "Welcome";
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Study Time</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ChaukeStudyTimeWebApp.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+
+    <div class="Container">
+
+        <header>
+            
+            <center><img class="logo"  src="Images/Color logo - no background.png" /></center> <br/>
+
+        </header>
+       
+
+        <div class="Content">
+            
+            
+            <center><h1 style="font-family:'Times New Roman', Times, serif; font-weight: bold">Study Time</h1></center>
+
+            
+            <center class="p">
+                <p style="color: red">______________________________________________________________________________________________________</p>
+            </center>           
+
+
+
+            <div class="account" >
+
+                <div class="Login" style="background-color:beige">
+
+                    <button class="input" style="background-color: blanchedalmond; border-block-style: solid; border-color: red;" onclick="location.href='Login'" type="button">Login</button>
+
+
+
+                </div>
+
+
+
+
+                <div class="Register" style="background-color:blanchedalmond">
+
+
+                    <button class="input" style="background-color: blanchedalmond; border-color: red; " onclick="location.href='Register'" type="button">Register</button>
+
+
+
+
+                </div>
+
+            </div>
+
+         
+
+
+        </div>
+
+
+    </div>
+
+    
+
+</body>
+
+

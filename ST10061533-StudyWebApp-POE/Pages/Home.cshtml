@@ -1,0 +1,69 @@
+﻿@page
+@model ST10061533_StudyWebApp_POE.Pages.HomeModel
+@{
+    ViewData["Title"] = "Home";
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Study Time</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ChaukeStudyTimeWebApp.styles.css" asp-append-version="true" />
+</head>
+
+<style>
+
+    .img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tips {
+        margin-left: 4rem;
+        margin-top: 6rem;
+    }
+
+    .i {
+        margin-right: 2rem;
+        width: 15rem;
+    }
+</style>
+
+<body>
+
+    <div style="display:flex">
+
+        <div class="img">
+
+            <center> <img class="i" src="Images/Color logo - no background.png" /> </center>
+
+
+        </div>
+
+        <div class="tips" style="display:block; border: solid; border-color:midnightblue; border-radius: 20px">
+            <h1>Welcome to Study Time</h1>
+
+            <h4> USEFUL STUDY TIPS: </h4>
+            <ul>
+                <li>Be Constistent</li>
+                <li>Sleep Properly</li>
+                <li>Create The Right Environment</li>
+                <li>Create Flashcards</li>
+                <li>Break Everything Down</li>
+                <li>Teach Other People</li>
+                <li>Get Some Exercise</li>
+                <li>Set Yourself Deadlines</li>
+                <li>Meditate</li>
+            </ul>
+        </div>
+
+    </div>
+
+
+
+
+
+
+</body>

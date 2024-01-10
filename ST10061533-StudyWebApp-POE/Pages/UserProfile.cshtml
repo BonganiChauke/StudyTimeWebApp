@@ -1,0 +1,99 @@
+﻿@page
+@model ST10061533_StudyWebApp_POE.Pages.UserProfileModel
+@{
+    ViewData["Title"] = "My Profile";
+}
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Study Time</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ChaukeStudyTimeWebApp.styles.css" asp-append-version="true" />
+   
+
+    <style>
+        .container {
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+
+        .table {
+            width: auto;
+            height: auto;
+            margin-top: 4rem;
+            border-collapse: collapse;
+            font-size: 0.8em;
+            font-family: sans-serif;
+            box-shadow: 0 0 2rem rgba(0, 0, 0, 0.45);
+        }
+
+            .table thead tr {
+                background-color: #009879;
+                color: #ffffff;
+            }
+
+            .table thead tr {
+                background-color: #009879;
+                color: #ffffff;
+            }
+
+        tr:hover {
+            background-color: #D6EEEE;
+        }
+
+        .card {
+            
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 25rem;
+            border-radius: 25px;
+            border-color: red;
+            display:block;
+            align-content:center;
+            justify-content:center;
+        }
+
+            
+            .card:hover {
+                box-shadow: 16px  16px 16px  rgba(241, 10, 22, 0.8);
+            }
+
+            
+
+
+    </style>
+
+</head>
+<body>
+
+    <header>
+
+        <center><img class="logo" src="Images/Color logo - no background.png" /></center>
+
+    </header>
+
+
+    <center>
+    <div class="card">
+        <center><img src="~/Images/man.png" alt="Avatar" style="width:50%"></center>
+        <div class="container">
+            @foreach (var item in Model.userList)
+            {
+                <h2>My Profile</h2>
+                
+                
+                <h4><b>@item.FIRSTNAME?.ToUpper() @item.LASTNAME?.ToUpper() </b></h4>
+                <p> Email: @item.EMAIL <br /> User Name: @item.USERNAME </p>
+                
+               
+            }
+            
+        </div>
+    </div>
+    </center>
+    
+    
+</body>

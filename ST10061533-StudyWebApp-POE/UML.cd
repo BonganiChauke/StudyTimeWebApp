@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ST10061533_StudyWebApp_POE.Pages.ErrorModel">
+    <Position X="1.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAQAAAAAAAAAIAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Pages\Error.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ST10061533_StudyWebApp_POE.Pages.HomeModel">
+    <Position X="3" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Pages\Home.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ST10061533_StudyWebApp_POE.Pages.IndexModel">
+    <Position X="4.75" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Pages\Index.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ST10061533_StudyWebApp_POE.Pages.LoginModel">
+    <Position X="6.75" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAIAAAAAAAAAAAAAAAAAACAAAQAAAEAACA=</HashCode>
+      <FileName>Pages\Login.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ST10061533_StudyWebApp_POE.Pages.ModulesModel">
+    <Position X="1.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAABAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAAAAQCA=</HashCode>
+      <FileName>Pages\Modules.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ST10061533_StudyWebApp_POE.Pages.PrivacyModel">
+    <Position X="3" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Pages\Privacy.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ST10061533_StudyWebApp_POE.Pages.RegisterModel">
+    <Position X="4.75" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>SAAAgCAAAABAAAAgAQAAAAAAAAAAAAAAAAQACgEAACA=</HashCode>
+      <FileName>Pages\Register.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ST10061533_StudyWebApp_POE.Pages.ResetPasswordModel">
+    <Position X="6.75" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAACA=</HashCode>
+      <FileName>Pages\ResetPassword.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ST10061533_StudyWebApp_POE.Pages.UserDashBoardModel">
+    <Position X="1.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAgAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAEAAAA=</HashCode>
+      <FileName>Pages\UserDashBoard.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ST10061533_StudyWebApp_POE.Pages.UserProfileModel">
+    <Position X="3" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAEAgAA=</HashCode>
+      <FileName>Pages\UserProfile.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ST10061533_StudyWebApp_POE.Pages.ViewModel">
+    <Position X="4.75" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAQIAAEAACA=</HashCode>
+      <FileName>Pages\View.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.AspNetCore.Mvc.RazorPages.PageModel">
+    <Position X="9" Y="1" Width="3.25" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

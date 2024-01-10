@@ -1,0 +1,155 @@
+﻿@page
+@model ST10061533_StudyWebApp_POE.Pages.RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Study Time</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ChaukeStudyTimeWebApp.styles.css" asp-append-version="true" />
+</head>
+<body>
+
+    <div class="Container">
+
+        <header>
+
+            <center><img class="logo" src="Images/Color logo - no background.png" /></center>
+
+        </header>
+
+        <style>
+
+            .LastName, .Password {
+                margin-left: 3rem;
+            }
+
+        </style>
+
+
+
+        <div class="Content">
+
+            <center><h1 style="font-family: 'Global Monospace'; font-weight: bold">Register An Account</h1></center>
+            <center><small>Step away from beign organized</small></center>
+
+            <div class="form">
+
+                <br /> <br />
+                <center>
+
+                    <p style="font-size:1rem; color: red">
+
+                        @Model.message
+
+
+                    </p>
+
+                </center>
+                <br /> <br />
+                <form id="form" method="post">
+
+                    <div style="display:flex">
+
+                        <div id="Details" class="FirstName">
+
+                            <input type="text" id="FirstName" class="input" name="FirstName" required autocomplete="off" spellcheck="true"> <br />
+
+                            <label class="label" id="LastName">First Name</label>
+
+                        </div>
+
+                        <div id="Details" class="LastName">
+
+                            <input class="input" type="text" id="LastName" name="LastName" required autocomplete="off" spellcheck="true"> <br />
+
+                            <label class="label" id="details">Last Name</label>
+
+
+                        </div>
+
+                    </div>
+
+                    <br />
+
+                    <div id="Details">
+
+                        <input class="input" type="text" id="Email" name="Email" required autocomplete="off">
+
+
+                        <label class="label" id="details">Email</label> <br />
+
+
+                    </div>
+
+                    <br />
+                    <p>
+                        Username contains an underscore and is no more
+                        than 8 characters long
+                    </p>
+                    <br />
+
+                    <div id="Details">
+
+                        <input class="input" type="text" id="text" name="UserName" required autocomplete="off">
+
+
+
+                        <label class="label" id="details">UserName</label> <br />
+
+                        
+
+                    </div>
+
+                    <br />
+                    <p>
+                        Password must meet the  following passwor requirements<br/>
+                        the password must be: At least 8 characters long<br />
+                        Contain a capital letter and lowercase<br />
+                        Contain a number <br/>
+                        Contain a special character <br/>
+                    </p>
+                    <br />
+
+                    <div style="display:flex">
+
+                        <div id="Details">
+
+                            <input class="input" type="password" id="Password" name="Password" required autocomplete="off">
+
+                            <label class="label" id="details">Password</label> <br />
+
+
+                        </div>
+
+                        
+
+                    </div>
+
+                    <br />
+                    <input class="input" style="background-color:blanchedalmond; border-color: red" id="btn" type="submit" name="submit" value="Submit"> <br />
+                    <br />
+                    <br />
+                    <br />
+
+
+                </form>
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+</body>
+
+

@@ -1,0 +1,107 @@
+﻿@page
+@model ST10061533_StudyWebApp_POE.Pages.LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Study Time</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ChaukeStudyTimeWebApp.styles.css" asp-append-version="true" />
+</head>
+<style>
+
+    #check {
+        margin-top: 1rem;
+    }
+</style>
+<body>
+
+    <div class="Container">
+
+        <header>
+
+            <center><img class="logo" src="Images/Color logo - no background.png" /></center>
+
+        </header>
+
+
+        <div class="Content">
+
+            <center><h1 style="font-family: 'Global Monospace'; font-weight: bold">Login In with your Registered Account</h1></center>
+            <center><small>Keep going your nearly there</small></center>
+
+            <div class="form">
+
+                <form id="form" method="post">
+
+                    <br />
+
+                    <div id="Details">
+
+                        <input class="input" type="text" id="text" name="UserNameLogin" required>
+
+
+                        <label class="label" id="details">User Name</label>
+
+
+
+                    </div>
+
+                    <br />
+
+                    <div id="Details">
+
+                        <input class="input" type="password" id="Password" name="PasswordLogin" required> 
+                        
+                        
+
+
+                        <label class="label" id="details">Password</label>
+
+
+                    </div>
+                    @*<input id="check" type="checkbox" />*@
+
+                    <br />
+                    <input class="input" style="background-color:blanchedalmond; border-color: red" id="btn" type="submit" name="submit" value="Submit"> <br />
+
+                    <small style="font-palette: light">Forgot Your Password</small> <button class="input" style="background-color: blanchedalmond;  border-color:red" onclick="location.href='ResetPassword'" type="button">Reset</button> <br />
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+<br />
+<center>
+
+    <p style="font-size:3rem; color: red">
+
+        @Model.message
+
+    </p>
+
+</center>
+<script>
+
+    check.onclick = togglePassword;
+    function togglePassword() {
+        if (check.checked) {
+
+            Password.type = "text"
+        }
+
+        else {
+            Password.type = "password";
+        }
+
+    }
+</script>

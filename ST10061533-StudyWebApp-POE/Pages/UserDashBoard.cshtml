@@ -1,0 +1,107 @@
+﻿@page
+@model ST10061533_StudyWebApp_POE.Pages.UserDashBoardModel
+@{
+    ViewData["Title"] = "Study Plan";
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Study Time</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ChaukeStudyTimeWebApp.styles.css" asp-append-version="true" />
+
+    <style>
+
+        .dashboard {
+            display: flex;
+            height: 90vh;
+            width: auto;
+        }
+
+        .menu {
+            color: black;
+            padding: 20px;
+            min-width: 200px;
+            border: solid;
+        }
+
+            .menu button {
+                display: block;
+                width: 100%;
+                padding: 5px;
+                margin-bottom: 5px;
+                border: solid;
+                color: black;
+                cursor: pointer;
+                height: 4.5rem;
+                border-color: red;
+                border-radius: 15px;
+            }
+
+        iframe {
+            flex: 1;
+            top: auto;
+            scroll-behavior: smooth;
+            border: solid;
+            border-radius: 10px;
+            border-color: midnightblue;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <div class="menu" style="border-color:indigo; border-radius: 50px">
+
+            <center> <h1 style=" border: solid; border-color:midnightblue; border-radius: 10px">Menu</h1> </center> <br />
+            <button onclick="Home('Home')"> <img class="icons" src="~/Images/Home_Icon.png" width="50" /> Home </button>
+            <button onclick="UserProfile('@Model.userName')"> <img class="icons" src="~/Images/userProfile.png" width="50" /> My Profile </button>
+            <button onclick="Modules('@Model.userName')"> <img class="icons" src="~/Images/addModules.png" width="50" /> Add Modules </button>
+            <button onclick="View('@Model.userName')"> <img class="icons" src="~/Images/viewModules.png" width="50" /> View Modules</button>
+            <button style="background-color: blanchedalmond;  border-block-color:red" onclick="location.href='Index'" type="button"> <img class="icons" src="~/Images/power.png" width="50" /> Login</button>
+
+        </div>
+        <iframe id="iframe" src="/Home?UserName=@Model.userName"></iframe>
+    </div>
+
+
+
+</body>
+
+<script>
+
+    function Home() {
+
+        document.getElementById("iframe").src = "/Home";
+    }
+
+    function UserProfile(userName) {
+
+        document.getElementById("iframe").src = "/UserProfile?userName=" + userName + "";
+    }
+
+    function Modules(userName) {
+
+        document.getElementById("iframe").src = "/Modules?userName=" + userName + "";
+    }
+
+    function View(userName) {
+
+        document.getElementById("iframe").src = "/View?userName=" + userName + "";
+    }
+
+
+    function logOut() {
+
+        // Log out the current user
+        WebSecurity.Logout();
+
+        // Redirect back to the homepage
+        Redirect("/Index");
+
+    }
+</script>
