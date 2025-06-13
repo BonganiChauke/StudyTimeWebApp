@@ -14,7 +14,7 @@ namespace ClassLibrary
         public static string users = "";
         public static string newPass = "";
 
-        public static SqlConnection Connection = new SqlConnection("Data Source=BONGANI\\SQLEXPRESS;Initial Catalog=StudyTimeDatabase;Integrated Security=True");
+        public static SqlConnection Connection = new SqlConnection(@"Server=Romeo\SQLEXPRESS;Database=StudyTimeDatabase;Trusted_Connection=True;");
 
         //method to insert into table user
         public static string InsertUser(string firstName, string lastName, string email, string userName, string password, string txtbox_userName)
