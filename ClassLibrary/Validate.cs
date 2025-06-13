@@ -63,7 +63,7 @@ namespace ClassLibrary
         //method to check username
         public static Boolean CheckUserName(string userName)
         {
-            if (regex_UnderScore.IsMatch(userName) && userName.Length == 8)
+            if (regex_UnderScore.IsMatch(userName) && userName.Length <= 8)
             {
                 UnderScore = true;
             }
