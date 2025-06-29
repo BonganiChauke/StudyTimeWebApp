@@ -3,6 +3,42 @@
 html {
     font-size: 14px;
 }
+/* Navbar */
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #4caf50, #81c784); /* Example gradient */
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 56px; /* Account for fixed navbar height */
+}
+
+    .hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .hero a {
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
+
 
 @media (min-width: 768px) {
     html {
