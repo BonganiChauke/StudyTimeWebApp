@@ -38,6 +38,14 @@ html {
         border-radius: 5px;
     }
 
+#about i {
+    transition: transform 0.3s ease;
+}
+
+    #about i:hover {
+        transform: scale(1.2);
+    }
+
 
 
 @media (min-width: 768px) {
